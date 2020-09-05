@@ -2,7 +2,7 @@
 using Unity.Jobs;
 using Unity.Mathematics;
 
-namespace beerserk.SegmentedTween
+namespace alexnown.SegmentedTween
 {
     [UpdateInGroup(typeof(SegmentedTweeningSystemGroup))]
     public class UpdateSegmentSystem : SystemBase

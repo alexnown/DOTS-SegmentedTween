@@ -5,7 +5,7 @@ using Unity.Mathematics;
 using UnityEditor;
 #endif
 
-namespace beerserk.SegmentedTween
+namespace alexnown.SegmentedTween
 {
     public class AnimationClipTransformSegmenter : MonoBehaviour, IConvertGameObjectToEntity
     {
@@ -34,7 +34,6 @@ namespace beerserk.SegmentedTween
             for (int i = 0; i < frameCount; i++)
             {
                 clip.SampleAnimation(gameObject, time);
-
                 if (SaveTranslates) translations[i] = transform.localPosition;
                 if (SaveRotations) rotations[i] = transform.localRotation;
                 if (SaveScales) scales[i] = transform.localScale;

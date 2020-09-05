@@ -1,8 +1,7 @@
 ﻿using Unity.Entities;
 using Unity.Mathematics;
-using UnityEngine;
 
-namespace beerserk.SegmentedTween
+namespace alexnown.SegmentedTween
 {
     [UpdateInGroup(typeof(SegmentedTweeningSystemGroup))]
     [UpdateBefore(typeof(UpdateSegmentSystem))]
@@ -17,7 +16,7 @@ namespace beerserk.SegmentedTween
                 switch (tweening.Type)
                 {
                     case TweeningType.Incremental:
-                        progress = Mathf.Repeat(progress, parameters.TotalLength);
+                        progress = math.clamp(progress - math.floor(progress / parameters.TotalLength) * parameters.TotalLength, 0f, parameters.TotalLength);
                         break;
                     case TweeningType.Yoyo:
                         if (progress < 0)

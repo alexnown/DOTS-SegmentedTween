@@ -1,7 +1,7 @@
 ﻿using Unity.Entities;
 using Unity.Transforms;
 
-namespace beerserk.SegmentedTween
+namespace alexnown.SegmentedTween
 {
     [WriteGroup(typeof(Translation))]
     public struct SegmentedTranslations : IComponentData

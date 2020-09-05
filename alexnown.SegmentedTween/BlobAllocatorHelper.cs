@@ -2,7 +2,7 @@
 using Unity.Collections;
 using Unity.Mathematics;
 
-namespace beerserk.SegmentedTween
+namespace alexnown.SegmentedTween
 {
     public struct FloatArray
     {

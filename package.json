@@ -1,8 +1,8 @@
 {
-  "name": "beerserk.segmented-tween",
+  "name": "alexnown.segmented-tween",
   "description": "Implements tweening depends on stored segments. Useful for moving along waypoints, sampling and playing back animation clips, tweening custom values, etc.",
-  "version": "0.0.1-preview",
-  "unity": "2019.3",
+  "version": "0.0.2-preview",
+  "unity": "2020.1",
   "displayName": "Segmented tween",
   "keywords": [
         "dots", 
@@ -12,7 +12,7 @@
         "segmenting"
     ], 
   "dependencies": {
-    "com.unity.entities": "0.11.1-preview.4"
+    "com.unity.entities": "0.14.0-preview.18"
   },
   "samples": [
     {

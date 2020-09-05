@@ -350,21 +350,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 643159671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 459884cc02c20914294f35b6185a2a54, type: 3}
+  m_Script: {fileID: 11500000, guid: 25fd62fbf8da5f447abf1580c0794513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Targets:
   - {fileID: 2139666599}
   - {fileID: 955644969}
   - {fileID: 552458495}
+  - {fileID: 2139666599}
   SavePositions: 1
   SaveRotations: 1
   SaveScales: 1
   AutoUpdateSegmentDistances: 1
-  TotalDistance: 19.918528
+  TotalDistance: 31.231174
   Distances:
   - 9.6
   - 19.918528
+  - 31.231174
 --- !u!114 &643159673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,7 +452,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 643159671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddb9c037fc8684847ba6c749d7b7d26e, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c8b738b2e849d94aaaccf2ae7a8d997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5

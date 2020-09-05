@@ -1,8 +1,8 @@
 ﻿using Unity.Entities;
 
-namespace beerserk.SegmentedTween
+namespace alexnown.SegmentedTween
 {
-    public struct SegmentedScales : IComponentData
+    public struct SegmentingBounds : IComponentData
     {
         public BlobAssetReference<FloatArray> Reference;
     }

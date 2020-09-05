@@ -1,6 +1,6 @@
 ﻿using Unity.Entities;
 
-namespace beerserk.SegmentedTween
+namespace alexnown.SegmentedTween
 {
     public enum TweeningType : byte
     {

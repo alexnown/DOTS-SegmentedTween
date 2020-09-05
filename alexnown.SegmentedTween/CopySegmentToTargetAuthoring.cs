@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Unity.Entities;
 
-namespace beerserk.SegmentedTween
+namespace alexnown.SegmentedTween
 {
     public class CopySegmentToTargetAuthoring : MonoBehaviour, IConvertGameObjectToEntity
     {

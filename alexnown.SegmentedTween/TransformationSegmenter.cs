@@ -2,7 +2,7 @@
 using Unity.Entities;
 using Unity.Collections;
 
-namespace beerserk.SegmentedTween
+namespace alexnown.SegmentedTween
 {
     [ExecuteAlways]
     public class TransformationSegmenter : MonoBehaviour, IConvertGameObjectToEntity

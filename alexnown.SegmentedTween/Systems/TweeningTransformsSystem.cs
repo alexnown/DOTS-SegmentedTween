@@ -3,9 +3,9 @@ using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Transforms;
 
-namespace beerserk.SegmentedTween
+namespace alexnown.SegmentedTween
 {
-    [UpdateInGroup(typeof(ApplyTweeningSystemGroup))]
+    [UpdateBefore(typeof(TransformSystemGroup))]
     public class TweeningTransformsSystem : SystemBase
     {
         protected override void OnUpdate()
@@ -19,7 +19,7 @@ namespace beerserk.SegmentedTween
                     position.Value = math.lerp(firstValue, secondValue, segment.Ratio);
                 }).ScheduleParallel(this.Dependency);
 
-            var translation2dJobHandler = Entities.WithName("tween_positions2d")
+            translationJobHandler = Entities.WithName("tween_positions2d")
                 .WithEntityQueryOptions(EntityQueryOptions.FilterWriteGroup)
                 .ForEach((ref Translation position, in Segment segment, in SegmentedTranslations2D positions) =>
                 {
@@ -55,8 +55,8 @@ namespace beerserk.SegmentedTween
                     scale.Value = math.lerp(firstValue, secondValue, segment.Ratio);
                 }).ScheduleParallel(this.Dependency);
 
-            this.Dependency = JobHandle.CombineDependencies(translationJobHandler, translation2dJobHandler, rotationJobHandler);
-            this.Dependency = JobHandle.CombineDependencies(this.Dependency, scalesJobHandler, nonUniformScalesJobHandler);
+            this.Dependency = JobHandle.CombineDependencies(translationJobHandler, rotationJobHandler);
+            this.Dependency = JobHandle.CombineDependencies(this.Dependency, scalesJobHandler , nonUniformScalesJobHandler);
         }
     }
 }

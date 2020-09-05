@@ -1,7 +1,7 @@
 ﻿using Unity.Entities;
 
-namespace beerserk.SegmentedTween
+namespace alexnown.SegmentedTween
 {
-    [UpdateBefore(typeof(Unity.Transforms.TransformSystemGroup))]
+    [UpdateInGroup(typeof(FixedStepSimulationSystemGroup))]
     public class SegmentedTweeningSystemGroup : ComponentSystemGroup { }
 }
